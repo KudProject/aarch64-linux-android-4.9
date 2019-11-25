@@ -59,13 +59,13 @@ class CompilerWrapper():
 
 
   def invoke_compiler(self):
-    self.print_deprecation_warning()
+    #self.print_deprecation_warning()
     self.set_real_compiler()
     self.parse_custom_flags()
     self.process_gomacc_command()
     self.add_flags()
     self.execargs += [self.real_compiler] + self.args
-    time.sleep(3)
+    #time.sleep(3)
     os.execv(self.argv0, self.execargs)
 
 
